@@ -170,10 +170,10 @@ const ShowcaseSection = () => {
                         </div>
                       </div>
                       <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                        <div className="text-green-400 text-2xl font-bold font-montserrat">89%</div>
-                        <div className="text-white/80 text-sm font-montserrat">Automation Rate</div>
+                        <div className="text-green-400 text-2xl font-bold font-montserrat">100%</div>
+                        <div className="text-white/80 text-sm font-montserrat">Delivery Rate</div>
                         <div className="w-full bg-white/20 rounded-full h-1 mt-2">
-                          <div className="bg-green-400 h-1 rounded-full w-5/6" />
+                          <div className="bg-green-400 h-1 rounded-full w-full" />
                         </div>
                       </div>
                     </div>
