@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navigation from './Navigation';
 import Footer from './Footer';
+import { supabase, type DemoRequestInsert } from '@/lib/supabase';
 
 const BookDemoPage = () => {
   const [formData, setFormData] = useState({
@@ -11,10 +12,12 @@ const BookDemoPage = () => {
     lastName: '',
     companyName: '',
     email: '',
-    serviceOfInterest: ''
+    serviceOfInterest: '',
+    otherMessage: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentStep, setCurrentStep] = useState(0);
@@ -112,15 +115,43 @@ const BookDemoPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
     setIsLoading(true);
     
-    // Simulate form submission with realistic delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsLoading(false);
-    setIsSubmitted(true);
-    // Scroll to top after submission
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    try {
+      // Prepare data for Supabase
+      const demoRequestData: DemoRequestInsert = {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        company_name: formData.companyName,
+        email: formData.email,
+        service_of_interest: formData.serviceOfInterest,
+        other_message: formData.otherMessage || ''
+      };
+
+      // Insert into Supabase
+      const { data, error } = await supabase
+        .from('demo_requests')
+        .insert([demoRequestData])
+        .select();
+
+      if (error) {
+        console.error('Supabase error:', error);
+        setSubmitError('Failed to submit your request. Please try again.');
+        return;
+      }
+
+      console.log('Demo request submitted successfully:', data);
+      setIsSubmitted(true);
+      // Scroll to top after submission
+      window.scrollTo({ top: 0, behavior: 'auto' });
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitError('An unexpected error occurred. Please try again.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const goToHeroSection = () => {
@@ -134,7 +165,7 @@ const BookDemoPage = () => {
   };
 
   const isFormValid = formData.firstName && formData.lastName && formData.companyName && formData.email && formData.serviceOfInterest;
-  const completionPercentage = Object.values(formData).filter(Boolean).length / 5 * 100;
+  const completionPercentage = Object.values(formData).filter(Boolean).length / 6 * 100;
 
   if (isSubmitted) {
     return (
@@ -656,6 +687,8 @@ const BookDemoPage = () => {
                         <motion.textarea
                           id="otherMessage"
                           name="otherMessage"
+                          value={formData.otherMessage}
+                          onChange={handleInputChange}
                           rows={6}
                           placeholder="Tell us more about your business needs..."
                           className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:ring-2 focus:ring-[#FF6500] focus:border-transparent transition-all duration-300 font-montserrat backdrop-blur-sm text-sm resize-none"
@@ -718,6 +751,19 @@ const BookDemoPage = () => {
                         transition={{ duration: 0.4, delay: 1.4 }}
                         className="pt-2"
                       >
+                        {/* Error Message */}
+                        {submitError && (
+                          <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="mb-4 p-3 bg-red-500/20 border border-red-500/30 rounded-lg"
+                          >
+                            <p className="text-red-200 text-sm font-montserrat text-center">
+                              {submitError}
+                            </p>
+                          </motion.div>
+                        )}
+
                         <motion.button
                           type="submit"
                           disabled={!isFormValid || isLoading}
@@ -763,7 +809,7 @@ const BookDemoPage = () => {
                         className="text-center pt-2"
                       >
                         <p className="text-white/60 text-xs font-montserrat">
-                          We will never share your data. It is only used to create your custom AI demo.
+                          We will never share your data. It is securely stored and only used to create your custom AI demo.
                         </p>
                       </motion.div>
                     </form>
