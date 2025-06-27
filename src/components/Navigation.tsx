@@ -159,7 +159,7 @@ const Navigation = () => {
               <img 
                 src={scrolled ? "/web (1).png" : "/Artboard 1@4x copy.png"}
                 alt="OpswayAI Logo" 
-                className="h-8 w-auto transition-all duration-500"
+                className="h-12 w-auto transition-all duration-500"
               />
               
               {/* Hover glow effect */}
