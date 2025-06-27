@@ -118,6 +118,11 @@ const Footer = () => {
                 onClick={scrollToTop}
                 className="group flex items-center space-x-3 hover:scale-105 transition-transform duration-300"
               >
+                <img 
+                  src="/Artboard 1@4x.png" 
+                  alt="OpswayAI Logo" 
+                  className="h-8 w-auto"
+                />
                 <div>
                   <div className="text-2xl font-bold font-montserrat group-hover:text-[#FF6500] transition-colors duration-300">
                     opsway<span className="text-[#FF6500]">AI</span>
