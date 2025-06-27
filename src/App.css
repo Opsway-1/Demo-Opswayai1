@@ -1,0 +1,14 @@
+/* Remove all default margins and padding to ensure full viewport coverage */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Ensure the main app container takes full space */
+.min-h-screen {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
