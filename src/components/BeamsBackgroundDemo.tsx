@@ -160,40 +160,90 @@ export function BeamsBackgroundDemo() {
                                     damping: 10
                                 }}
                             >
-                                <motion.span 
-                                    className="inline-block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent"
-                                    initial={{ opacity: 0, x: -30 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.4 }}
+                                <motion.div
+                                    className="overflow-hidden"
+                                    initial={{ height: 0 }}
+                                    animate={{ height: "auto" }}
+                                    transition={{ duration: 0.8, delay: 0.3 }}
                                 >
-                                    Try Before You Trust
-                                </motion.span>
+                                    <motion.span 
+                                        className="inline-block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent"
+                                        initial={{ opacity: 0, y: 100, rotateX: -90 }}
+                                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                                        transition={{ 
+                                            duration: 1.0, 
+                                            delay: 0.5,
+                                            type: "spring",
+                                            stiffness: 120,
+                                            damping: 12
+                                        }}
+                                    >
+                                        Try Before You Trust
+                                    </motion.span>
+                                </motion.div>
                                 <br />
-                                <motion.span 
-                                    className="inline-block bg-gradient-to-r from-[#FF6500] to-[#ff8533] bg-clip-text text-transparent relative"
-                                    initial={{ opacity: 0, x: 30 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.6 }}
+                                <motion.div
+                                    className="overflow-hidden"
+                                    initial={{ height: 0 }}
+                                    animate={{ height: "auto" }}
+                                    transition={{ duration: 0.8, delay: 0.7 }}
                                 >
-                                    We Deliver First.
-                                </motion.span>
+                                    <motion.span 
+                                        className="inline-block bg-gradient-to-r from-[#FF6500] to-[#ff8533] bg-clip-text text-transparent relative"
+                                        initial={{ opacity: 0, y: 100, rotateX: -90 }}
+                                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                                        transition={{ 
+                                            duration: 1.0, 
+                                            delay: 0.9,
+                                            type: "spring",
+                                            stiffness: 120,
+                                            damping: 12
+                                        }}
+                                    >
+                                        We Deliver First
+                                        <motion.div 
+                                            className="absolute -inset-4 bg-[#FF6500]/20 blur-2xl rounded-lg"
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: [0.3, 0.7, 0.3], scale: [0.8, 1.1, 0.8] }}
+                                            transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+                                        />
+                                    </motion.span>
+                                </motion.div>
                             </motion.h1>
 
                             <motion.p 
                                 className="text-xl sm:text-2xl md:text-3xl text-white/80 max-w-4xl mx-auto leading-relaxed font-light font-montserrat"
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1, delay: 0.8 }}
+                                initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+                                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{ 
+                                    duration: 1.2, 
+                                    delay: 1.3,
+                                    type: "spring",
+                                    stiffness: 80,
+                                    damping: 15
+                                }}
                             >
-                                Discover exactly how AI can streamline your business with a hands-on system built specifically for you.
+                                <motion.span
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 0.8, delay: 1.5 }}
+                                >
+                                    Discover exactly how AI can streamline your business with a hands-on system built specifically for you
+                                </motion.span>
                             </motion.p>
 
                             {/* Enhanced CTA Buttons */}
                             <motion.div 
                                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-                                initial={{ opacity: 0, y: 30 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1, delay: 1.0 }}
+                                initial={{ opacity: 0, y: 40, scale: 0.9 }}
+                                animate={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ 
+                                    duration: 1, 
+                                    delay: 1.8,
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 15
+                                }}
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
