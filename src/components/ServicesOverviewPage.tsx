@@ -1,3 +1,6 @@
+Here's the fixed version with all missing closing brackets added:
+
+```jsx
 import React, { useState, useEffect } from 'react';
 import { MessageSquare, Bot, Workflow, Globe, ArrowRight, CheckCircle, Star, Users, TrendingUp, Zap, Shield, Target, Database, Calendar, Send, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -474,26 +477,27 @@ const ServicesOverviewPage = () => {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                {[
-                  { icon: "🚀", title: "Fast Implementation", desc: "Get up and running in days, not months" },
-                  { icon: "🔧", title: "Custom Solutions", desc: "Tailored to your specific business needs" },
-                  { icon: "🛡️", title: "Enterprise Security", desc: "Bank-level security and compliance" }
-                ].map((item, index) => (
-                  <motion.div 
-                    key={index}
-                    className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 + (index * 0.1) }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="text-3xl mb-3">{item.icon}</div>
-                    <h4 className="font-bold text-[#0B192C] mb-2 font-montserrat">{item.title}</h4>
-                    <p className="text-gray-600 text-sm font-montserrat">{item.desc}</p>
-                  </motion.div>
-                ))}
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  {[
+                    { icon: "🚀", title: "Fast Implementation", desc: "Get up and running in days, not months" },
+                    { icon: "🔧", title: "Custom Solutions", desc: "Tailored to your specific business needs" },
+                    { icon: "🛡️", title: "Enterprise Security", desc: "Bank-level security and compliance" }
+                  ].map((item, index) => (
+                    <motion.div 
+                      key={index}
+                      className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 0.4 + (index * 0.1) }}
+                      viewport={{ once: true }}
+                      whileHover={{ y: -5 }}
+                    >
+                      <div className="text-3xl mb-3">{item.icon}</div>
+                      <h4 className="font-bold text-[#0B192C] mb-2 font-montserrat">{item.title}</h4>
+                      <p className="text-gray-600 text-sm font-montserrat">{item.desc}</p>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <Button
@@ -612,3 +616,4 @@ const ServicesOverviewPage = () => {
 };
 
 export default ServicesOverviewPage;
+```
