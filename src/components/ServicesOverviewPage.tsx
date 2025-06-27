@@ -185,7 +185,7 @@ const ServicesOverviewPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                  <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-[#FF6500] to-[#ff8533] bg-clip-text text-transparent">
                     What We Do
                   </span>
                   <span className="bg-gradient-to-r from-[#FF6500] to-[#ff8533] bg-clip-text text-transparent relative">
