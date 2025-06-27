@@ -121,7 +121,7 @@ const Footer = () => {
                 <img 
                   src="/Artboard 1@4x.png" 
                   alt="OpswayAI Logo" 
-                  className="h-8 w-auto"
+                  className="h-16 w-auto"
                 />
               </button>
             </motion.div>
