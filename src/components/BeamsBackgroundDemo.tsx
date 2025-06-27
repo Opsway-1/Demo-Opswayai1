@@ -149,7 +149,7 @@ export function BeamsBackgroundDemo() {
                         {/* Main headline with enhanced animations */}
                         <div className="hero-content space-y-8">
                             <motion.h1 
-                                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.9] tracking-tight font-montserrat"
+                                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[0.85] tracking-tight font-montserrat"
                                 initial={{ opacity: 0, y: 50, scale: 0.9 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                 transition={{ 
@@ -181,7 +181,6 @@ export function BeamsBackgroundDemo() {
                                         Try Before You Trust
                                     </motion.span>
                                 </motion.div>
-                                <br />
                                 <motion.div
                                     className="overflow-hidden"
                                     initial={{ height: 0 }}
