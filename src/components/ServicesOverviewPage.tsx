@@ -474,6 +474,7 @@ const ServicesOverviewPage = () => {
               </p>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {[
                   { icon: "🚀", title: "Fast Implementation", desc: "Get up and running in days, not months" },
                   { icon: "🔧", title: "Custom Solutions", desc: "Tailored to your specific business needs" },
