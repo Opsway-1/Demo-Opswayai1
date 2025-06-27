@@ -473,7 +473,8 @@ const ServicesOverviewPage = () => {
                 We combine cutting-edge AI technology with practical business solutions to deliver measurable results.
               </p>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="flex justify-center mb-8">
+              <div className="grid md:grid-cols-3 gap-8 max-w-4xl w-full">
                 {[
                   { icon: "🚀", title: "Fast Implementation", desc: "Get up and running in days, not months" },
                   { icon: "🔧", title: "Custom Solutions", desc: "Tailored to your specific business needs" },
@@ -481,7 +482,7 @@ const ServicesOverviewPage = () => {
                 ].map((item, index) => (
                   <motion.div 
                     key={index}
-                    className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300"
+                    className="bg-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.4 + (index * 0.1) }}
@@ -493,6 +494,7 @@ const ServicesOverviewPage = () => {
                     <p className="text-gray-600 text-sm font-montserrat">{item.desc}</p>
                   </motion.div>
                 ))}
+              </div>
               </div>
 
               <Button
