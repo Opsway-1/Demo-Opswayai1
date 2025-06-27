@@ -54,8 +54,7 @@ const ServicesOverviewPage = () => {
       description: "AI-powered outreach campaigns that identify, qualify, and convert high-value prospects into customers through personalized messaging at scale.",
       features: ["Smart lead scoring", "Multi-channel outreach", "Automated follow-ups", "CRM integration"],
       color: "from-[#FF6500] to-[#ff8533]",
-      action: goToLeadGeneration,
-      stats: { value: "300%", label: "Lead Increase" }
+      action: goToLeadGeneration
     },
     {
       icon: <Bot className="w-8 h-8" />,
@@ -63,8 +62,7 @@ const ServicesOverviewPage = () => {
       description: "24/7 intelligent customer support agents that handle inquiries, book appointments, and provide instant responses with human-like conversation.",
       features: ["Natural language processing", "Voice & text support", "Appointment booking", "Lead qualification"],
       color: "from-blue-500 to-blue-600",
-      action: goToAIVoiceChat,
-      stats: { value: "24/7", label: "Always Available" }
+      action: goToAIVoiceChat
     },
     {
       icon: <Workflow className="w-8 h-8" />,
@@ -72,8 +70,7 @@ const ServicesOverviewPage = () => {
       description: "Streamline business processes with intelligent automation that handles repetitive tasks, manages data flow, and optimizes team productivity.",
       features: ["Process automation", "Task management", "Data synchronization", "Performance tracking"],
       color: "from-green-500 to-green-600",
-      action: goToWorkflowAutomations,
-      stats: { value: "80%", label: "Time Saved" }
+      action: goToWorkflowAutomations
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -81,8 +78,7 @@ const ServicesOverviewPage = () => {
       description: "AI-powered websites that adapt to user behavior, optimize conversions, and integrate seamlessly with your automation systems.",
       features: ["Responsive design", "AI optimization", "Conversion tracking", "Automation integration"],
       color: "from-purple-500 to-purple-600",
-      action: goToSmartWebsites,
-      stats: { value: "250%", label: "Conversion Boost" }
+      action: goToSmartWebsites
     }
   ];
 
@@ -402,12 +398,6 @@ const ServicesOverviewPage = () => {
                 >
                   {/* Background gradient on hover */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300 rounded-3xl`} />
-                  
-                  {/* Stats Badge */}
-                  <div className="absolute top-6 right-6 bg-gray-100 group-hover:bg-[#FF6500] text-gray-600 group-hover:text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300">
-                    <div className="font-bold">{service.stats.value}</div>
-                    <div className="text-xs">{service.stats.label}</div>
-                  </div>
                   
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg relative z-10`}>
