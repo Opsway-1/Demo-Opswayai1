@@ -21,7 +21,7 @@ const TeamPage = () => {
       name: "Egzon Bulliqi",
       role: "CEO & Founder",
       bio: "Product strategist and automation expert, Egzon leads with a passion for building scalable, real-world AI systems that transform how businesses operate.",
-      image: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
+      image: "/DSCF2425 copy.JPG",
       linkedin: "#",
       email: "egzon@opswayai.com"
     },
@@ -583,7 +583,7 @@ const TeamPage = () => {
                         <img 
                           src={founder.image} 
                           alt={founder.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover object-center"
                         />
                       </div>
                       {/* Floating accent */}
