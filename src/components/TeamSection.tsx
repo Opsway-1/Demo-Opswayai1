@@ -117,6 +117,12 @@ const TeamSection = () => {
                 <div className="flex flex-col items-center text-center">
                   {/* Profile Image */}
                   <div className="relative mb-6">
+                    <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <img 
+                        src={founder.image} 
+                        alt={founder.name}
+                        className="w-full h-full object-cover object-center"
+                      />
                     </div>
                     {/* Floating accent */}
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#FF6500] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
