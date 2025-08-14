@@ -116,21 +116,6 @@ const ScheduleCallSection = () => {
                 </Button>
               </motion.div>
 
-              {/* Confirmation Message */}
-              <motion.div 
-                className="bg-green-50 border border-green-200 rounded-2xl p-6"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-green-600" />
-                  <p className="text-green-800 font-semibold font-montserrat">
-                    We'll reach out within 12 hours.
-                  </p>
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* Right Column - Calendly Widget */}
