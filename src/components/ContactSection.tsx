@@ -151,6 +151,63 @@ const ContactSection = () => {
               We'll build and send your working system in less than 12 hours, no charge.
             </motion.p>
 
+            {/* Contact Methods Grid */}
+            <motion.div
+              className="grid md:grid-cols-3 gap-8 mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              {contactMethods.map((method, index) => (
+                <motion.div
+                  key={index}
+                  className="group bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 hover:border-[#FF6500]/30 transition-all duration-400 cursor-pointer"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.7 + (index * 0.1) }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                >
+                  {/* Icon */}
+                  <div className={`w-16 h-16 bg-gradient-to-br ${method.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg relative z-10`}>
+                    {method.icon}
+                  </div>
+
+                  {/* Title */}
+                  <motion.h3
+                    className="text-xl font-bold text-white mb-2 font-montserrat group-hover:text-[#FF6500] transition-colors duration-300"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {method.title}
+                  </motion.h3>
+
+                  {/* Value (conditional link) */}
+                  {method.title === "Call Us" ? (
+                    <a
+                      href="https://wa.me/38344450008"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#FF6500] font-semibold mb-3 font-montserrat text-lg hover:text-white transition-colors duration-300 block"
+                    >
+                      {method.value}
+                    </a>
+                  ) : (
+                    <div className="text-[#FF6500] font-semibold mb-3 font-montserrat text-lg">
+                      {method.value}
+                    </div>
+                  )}
+                  <p className="text-white/80 font-montserrat text-sm leading-relaxed">
+                    {method.description}
+                  </p>
+
+                  {/* Hover effect overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#FF6500]/5 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 skew-x-12 pointer-events-none" />
+                </motion.div>
+              ))}
+            </motion.div>
+
                       href="https://wa.me/38344450008"
                       target="_blank"
                       rel="noopener noreferrer"
