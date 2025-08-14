@@ -150,12 +150,6 @@ const TeamSection = () => {
                     >
                       <Linkedin className="w-6 h-6" />
                     </a>
-                    <a 
-                      href={`mailto:${founder.email}`}
-                      className="w-12 h-12 bg-[#F4F4F4] rounded-full flex items-center justify-center text-gray-400 hover:text-[#FF6500] hover:bg-[#FF6500]/10 transition-all duration-300 shadow-md hover:shadow-lg"
-                    >
-                      <Mail className="w-6 h-6" />
-                    </a>
                   </div>
                 </div>
 
