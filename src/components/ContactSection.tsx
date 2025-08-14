@@ -55,11 +55,6 @@ const ContactSection = () => {
       description: "Get your AI agents running in under 48 hours with our streamlined onboarding process."
     },
     {
-      icon: "🎯",
-      title: "Proven Results",
-      description: "Our clients see an average 300% ROI within the first 3 months of implementation."
-    },
-    {
       icon: "🛡️",
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2 compliance and end-to-end encryption."
