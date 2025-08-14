@@ -140,9 +140,6 @@ const TeamSection = () => {
                     <p className="text-[#FF6500] font-semibold mb-4 font-montserrat text-lg">
                       {founder.role}
                     </p>
-                    <p className="text-gray-600 leading-relaxed font-montserrat text-lg max-w-md mx-auto">
-                      {founder.bio}
-                    </p>
                   </div>
 
                   {/* Social Links */}
