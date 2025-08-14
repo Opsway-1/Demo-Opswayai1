@@ -583,7 +583,7 @@ const TeamPage = () => {
                         <img 
                           src={founder.image} 
                           alt={founder.name}
-                          className="w-full h-full object-cover object-center"
+                          className="w-full h-full object-cover object-center scale-110"
                         />
                       </div>
                       {/* Floating accent */}
