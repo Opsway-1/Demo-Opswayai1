@@ -20,8 +20,7 @@ const ContactSection = () => {
 
   const benefits = [
     "No setup fees",
-    "Free demo in 12 hours", 
-    "Cancel anytime — no hassle"
+    "Free demo in 12 hours"
   ];
 
   const contactMethods = [
