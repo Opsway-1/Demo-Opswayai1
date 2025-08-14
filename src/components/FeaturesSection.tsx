@@ -115,7 +115,6 @@ const FeaturesSection = () => {
                       </div>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div className="text-white/80 font-montserrat">Leads Generated: 247</div>
-                        <div className="text-white/80 font-montserrat">Conversion Rate: 23%</div>
                       </div>
                     </div>
                   </div>
