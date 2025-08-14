@@ -14,7 +14,7 @@ const TeamSection = () => {
     },
     {
       name: "Erjon Krasniqi",
-      role: "CTO & Co-Founder",
+      role: "Co-Founder",
       bio: "Technical architect with deep AI knowledge, Erjon turns complex automation into intuitive solutions.",
       image: "/Erjoni.png",
       linkedin: "https://www.linkedin.com/in/erjon-krasniqi-423aa3279/",
