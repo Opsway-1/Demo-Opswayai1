@@ -186,9 +186,20 @@ const ContactSection = () => {
                   <h3 className="text-xl font-bold text-white mb-3 font-montserrat group-hover:text-[#FF6500] transition-colors duration-300">
                     {method.title}
                   </h3>
-                  <div className="text-[#FF6500] font-semibold mb-3 font-montserrat text-lg">
-                    {method.value}
-                  </div>
+                  {method.title === "Call Us" ? (
+                    <a 
+                      href="https://wa.me/38344450008"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#FF6500] font-semibold mb-3 font-montserrat text-lg hover:text-white transition-colors duration-300 block"
+                    >
+                      {method.value}
+                    </a>
+                  ) : (
+                    <div className="text-[#FF6500] font-semibold mb-3 font-montserrat text-lg">
+                      {method.value}
+                    </div>
+                  )}
                   <p className="text-white/80 font-montserrat text-sm leading-relaxed">
                     {method.description}
                   </p>
