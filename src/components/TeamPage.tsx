@@ -583,11 +583,7 @@ const TeamPage = () => {
                         <img 
                           src={founder.image} 
                           alt={founder.name}
-                          className={`w-full h-full object-cover ${
-                            founder.name === "Egzon Bulliqi" 
-                              ? "founder-image-egzon" 
-                              : "object-center"
-                          }`}
+                          className="w-full h-full object-cover object-center"
                         />
                       </div>
                       {/* Floating accent */}

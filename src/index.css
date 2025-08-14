@@ -702,15 +702,6 @@ textarea:focus {
   text-wrap: pretty;
 }
 
-/* Founder image positioning for better face centering */
-.founder-image {
-  object-position: center 30%;
-}
-
-.founder-image-egzon {
-  object-position: center 25%;
-}
-
 /* Improved spacing system */
 .space-y-tight > * + * {
   margin-top: 0.75rem;
