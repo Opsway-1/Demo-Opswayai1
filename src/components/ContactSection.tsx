@@ -346,7 +346,7 @@ const ContactSection = () => {
               {[
                 {
                   question: "What exactly will I get in the free demo?",
-                  answer: "We build and deliver a fully working AI automation system based on your business for example, lead gen campaigns, AI agents, or automation flows."
+                { icon: <CheckCircle className="w-4 h-4" />, text: "Expert guidance" }
                 },
                 {
                   question: "Do I need to manage or install anything?",
