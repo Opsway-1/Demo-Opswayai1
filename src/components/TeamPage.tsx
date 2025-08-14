@@ -29,7 +29,7 @@ const TeamPage = () => {
       name: "Erjon Krasniqi",
       role: "CTO & Co-Founder",
       bio: "Technical architect with deep AI knowledge, Erjon turns complex automation into intuitive solutions that businesses can actually use.",
-      image: "/Screenshot 2025-08-14 at 23.43.56.png",
+      image: "/Screenshot 2025-07-08 at 08.23.07.png",
       linkedin: "#",
       email: "erjon@opswayai.com"
     }
