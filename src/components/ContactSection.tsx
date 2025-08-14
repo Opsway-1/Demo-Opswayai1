@@ -57,11 +57,6 @@ const ContactSection = () => {
       icon: "🛡️",
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2 compliance and end-to-end encryption."
-    },
-    {
-      icon: "🌍",
-      title: "Global Reach",
-      description: "Serving clients across 25+ countries with 24/7 multilingual support."
     }
   ];
 
@@ -213,7 +208,7 @@ const ContactSection = () => {
                 Why Choose <span className="text-[#FF6500]">OpswayAI</span>?
               </h3>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+              <div className="grid md:grid-cols-2 gap-8 justify-center max-w-2xl mx-auto">
                 {whyChooseUs.map((item, index) => (
                   <motion.div 
                     key={index}
@@ -278,7 +273,7 @@ const ContactSection = () => {
 
             {/* Trust indicators */}
             <motion.div 
-              className="grid md:grid-cols-3 gap-6 mb-16"
+              className="grid md:grid-cols-2 gap-6 mb-16 max-w-lg mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
