@@ -76,12 +76,6 @@ const Footer = () => {
           icon: <Instagram className="w-4 h-4" />,
           external: true
         },
-        { 
-          label: "Terms of Service", 
-          href: "#", 
-          icon: <FileText className="w-4 h-4" />,
-          external: false
-        }
       ]
     }
   ];
