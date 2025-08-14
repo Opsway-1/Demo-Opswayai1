@@ -17,7 +17,7 @@ const TeamSection = () => {
       role: "CTO & Co-Founder",
       bio: "Technical architect with deep AI knowledge, Erjon turns complex automation into intuitive solutions.",
       image: "/Erjoni.png",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/erjon-krasniqi-423aa3279/",
       email: "erjon@opswayai.com"
     }
   ];
