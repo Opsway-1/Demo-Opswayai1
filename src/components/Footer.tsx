@@ -77,12 +77,6 @@ const Footer = () => {
           external: true
         },
         { 
-          label: "Privacy Policy", 
-          href: "#", 
-          icon: <Shield className="w-4 h-4" />,
-          external: false
-        },
-        { 
           label: "Terms of Service", 
           href: "#", 
           icon: <FileText className="w-4 h-4" />,
