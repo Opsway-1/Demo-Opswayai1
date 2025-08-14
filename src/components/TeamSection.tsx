@@ -9,7 +9,7 @@ const TeamSection = () => {
       role: "CEO & Founder",
       bio: "Product strategist and automation expert, Egzon leads with a passion for building scalable, real-world AI systems.",
       image: "/Screenshot 2025-07-08 at 08.23.07.png",
-      linkedin: "https://www.linkedin.com/in/egzon-bulliqi-aa468a1a9/",
+      linkedin: "#",
       email: "egzon@opswayai.com"
     },
     {
