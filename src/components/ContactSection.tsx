@@ -35,7 +35,7 @@ const ContactSection = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
-      value: "+1 (555) 123-4567",
+      value: "+383 (44) 450-008",
       description: "Speak directly with our experts",
       color: "from-green-500 to-green-600"
     },
