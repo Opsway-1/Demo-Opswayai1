@@ -8,7 +8,7 @@ const TeamSection = () => {
       name: "Egzon Bulliqi",
       role: "CEO & Founder",
       bio: "Product strategist and automation expert, Egzon leads with a passion for building scalable, real-world AI systems.",
-      image: "/Screenshot 2025-07-08 at 08.23.07.png",
+      image: "/DSCF2425 copy.JPG",
       linkedin: "#",
       email: "egzon@opswayai.com"
     },
