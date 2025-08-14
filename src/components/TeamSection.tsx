@@ -16,7 +16,7 @@ const TeamSection = () => {
       name: "Erjon Krasniqi",
       role: "CTO & Co-Founder",
       bio: "Technical architect with deep AI knowledge, Erjon turns complex automation into intuitive solutions.",
-      image: "",
+      image: "/Erjoni.png",
       linkedin: "#",
       email: "erjon@opswayai.com"
     }
